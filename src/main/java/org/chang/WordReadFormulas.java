@@ -56,7 +56,7 @@ public class WordReadFormulas {
     }
 
     public static void main(String[] args) throws Exception {
-        InputStream inputStream = WordReadFormulas.class.getClassLoader().getResourceAsStream("docx/answer.docx");
+        InputStream inputStream = WordReadFormulas.class.getClassLoader().getResourceAsStream("docx/数学试题.docx");
         XWPFDocument document = new XWPFDocument(inputStream);
 
         //storing the found MathML in a AllayList of strings
@@ -106,7 +106,8 @@ public class WordReadFormulas {
 
         //using MathJax for helping all browsers to interpret MathML
         writer.write("<script type=\"text/javascript\"");
-        writer.write(" async src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=MML_CHTML\"");
+//        writer.write(" async src=\"https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=MML_CHTML\"");
+        writer.write(" async src=\"http://dev.bcbook.cn/MathJax-master/MathJax.js?config=MML_CHTML\"");
         writer.write(">");
         writer.write("</script>");
 

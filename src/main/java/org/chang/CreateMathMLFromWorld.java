@@ -179,7 +179,7 @@ public class CreateMathMLFromWorld {
         return result;
     }
     public static void main(String[] args) {
-        String path = "docx/answer.docx";
+        String path = "docx/content.docx";
         try(InputStream inputStream = CreateMathMLFromWorld.class.getClassLoader().getResourceAsStream(path)) {
             XWPFDocument xwpfDocument = new XWPFDocument(inputStream);
             Map<Integer, String> formulaMap = getFormulaMap(xwpfDocument);
